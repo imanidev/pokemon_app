@@ -4,15 +4,19 @@ const port = 3000;
 
 const pokemon = require("./models/pokemon.js");
 
-app.set("view engine", "jsx"); //sets the view engine to jsx
-app.engine("jsx", require("jsx-view-engine").createEngine()); //sets the view engine to jsx
+app.set("view engine", "jsx");
+app.engine("jsx", require("jsx-view-engine").createEngine());
 
 app.get("/", (req, res) => {
   res.send("Welcome to the Pokemon App!");
 });
 
 app.get("/pokemon", (req, res) => {
-  res.render('./Index', {pokemon: pokemon});
+  res.render("./Index", { pokemon: pokemon });
+});
+
+app.get("/pokemon/:id", (req, res) => {
+  res.send(req.params.id);
 });
 
 app.listen(port, () => {
