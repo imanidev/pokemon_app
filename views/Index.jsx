@@ -20,9 +20,7 @@ class Index extends React.Component {
             const capitalizedPokemonName = capitalizeFirstLetter(pokemon.name);
             return (
               <li key={i}>
-                <a href={`/pokemon/${i}`}>
-                  <img src={pokemon.img} alt={capitalizedPokemonName} />
-                </a>
+                <a href={`/pokemon/${i}`}>{capitalizedPokemonName}</a>
               </li>
             );
           })}
