@@ -1,10 +1,9 @@
-// export default Show;
+
 import React from "react";
 import pokemon from "../models/pokemon";
 
 const myStyle = {
   color: "#000000",
-  // backgroundColor: '#7c8cbc',
 };
 
 const capitalizeFirstLetter = (string) => {
@@ -13,7 +12,6 @@ const capitalizeFirstLetter = (string) => {
 
 class Show extends React.Component {
   fixImageLink = (link) => {
-  
     return `${link}.jpg`;
   };
 
